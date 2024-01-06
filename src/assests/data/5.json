@@ -1,0 +1,51 @@
+{
+    "detial":{
+        "Name":"AirOne",
+        "id":5
+    },
+    "Motor": {
+      "Type": "Mid Drive",
+      "Power": "250 watt",
+      "Torque": "80 ~ 90 Nm (*)",
+      "Speed": "25kmph Maximum (*)",
+      "Range": "50 ~ 60 kms with PAS (*)",
+      "LoadCapacity": "120 kg. Maximum (*)"
+    },
+    "Lights": {
+      "Front": "LED (White)",
+      "Rear": "Reflector (Red)"
+    },
+    "Horn": "Yes",
+    "Keys": [
+      { "Type": "Battery Lock" },
+      { "Type": "ON/OFF Key", "Details": "Heavy Duty Big Size" }
+    ],
+    "Carrier": "Yes",
+    "Reflector": {
+      "Available": true,
+      "Colors": ["White", "Yellow", "Red"]
+    },
+    "Battery": {
+      "Type": "Lithium Ion (Cylindrical Cell) Panasonic",
+      "Detachable": true,
+      "Capacity": "275 WHR",
+      "Life": {
+        "Warranty": "2 Years*",
+        "Cycles": "~1500 discharge cycles"
+      }
+    },
+    "Charger": {
+      "Type": "2A",
+      "ChargingTime": "3 hours"
+    },
+    "PowerSpecifications": {
+      "Voltage": "36 VDC",
+      "Controller": ["10A", "15A"]
+    },
+    "Mode": "3 modes (Cruise Also)",
+    "Display": "Digital (Speed + Brake + Cruise + Battery Level + Error Code)",
+    "DeliveryOption": "90% Assembled in a Corrugated Box (All over India)",
+    "Service": "24/7 via Video Call and Tele Call",
+    "ManualHandbook": "Yes"
+  }
+  
