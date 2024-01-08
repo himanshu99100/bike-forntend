@@ -4,8 +4,8 @@ import br from '../assests/br.png'
 const team = () => {
     return (
         <div>
-            <div className='flex justify-center flex-wrap my-10'>
-                <div className='mx-6 w-1/4 border-2 border-geen-500'>
+            <div className='lg:flex lg:justify-center flex-wrap my-10'>
+                <div className='mx-6 sm:1/2 md:1/3 lg:w-1/4 border-2 border-geen-500'>
                     <img src={br} className='h-50'></img>
                     <h2 className='text-md font-bold'>Capt. B.R Yadav (Retd.)</h2>
                     <h2 className='text-md font-bold'>Founder</h2>
@@ -13,7 +13,7 @@ const team = () => {
                         & VCOAS Commendation Card,
                         President Commission & Appreciation Award.</p>
                 </div>
-                <div className='mx-6 w-1/4 border-2 border-geen-500'>
+                <div className='mx-6 sm:1/2 md:1/3 lg:w-1/4 border-2 border-geen-500'>
                     <img src={vikas} className='h-50'></img>
                     <h2 className='text-md font-bold'>Vikash Yadav</h2>
                     <h2 className='text-md font-bold'>Co Founder</h2>

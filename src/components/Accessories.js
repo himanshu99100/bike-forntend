@@ -49,23 +49,22 @@ const accessoriesItems = [
 
   }
 ]
+
 const Accessories = () => {
   return (
     <div>
       <section className="w-fit mx-14 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 justify-items-center justify-center gap-y-12 gap-x-10 mt-10 mb-5 ">
         {accessoriesItems.map((product) => (
           <div key={product.id} className="w-80 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-2xl  ">
-            <Link to={`/accessories/${product.id}`}>
+            <div>
               <img
                 src={product.imgsrc}
                 alt="Product"
-                className="w-2/3 h-60 mx-auto object-fit rounded-t-xl "
+                style={{width:'90%',aspectRatio:'8/9', objectFit:'contain',}}
               />
               <div>
-
-
               </div>
-            </Link>
+            </div>
             <span className="text-gray-400 mr-3 uppercase text-xs">WeRev</span>
             <p className="text-lg font-bold text-black truncate block capitalize">
               {product.name}

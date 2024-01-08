@@ -67,40 +67,38 @@ const Footer = () => {
                 WeRev PVT. LTD.
               </h6>
               <p>
-                A Welcome to <strong>WeRev</strong> where cycling meets innovation and adventure! We take pride in introducing our exceptional line of bicycles, meticulously designed to elevate your riding experience. From cutting-edge technology to sleek aesthetics, our products are crafted for both performance and style.
+                A Welcome to <strong>WeRev</strong> where ev-cycling meets innovation and adventure! We take pride in introducing our exceptional line of bicycles, meticulously designed to elevate your riding experience. From cutting-edge technology to sleek aesthetics, our products are crafted for both performance and style.
               </p>
             </div>
-
-            {/* Useful links section */}
             <div className="m-0 lg:ml-12">
-              <p className="mb-4">
+              <p className="mb-4 text -left">
                 <Link to='/team' className="text-neutral-600 dark:text-neutral-200">
                   Our Team
                 </Link>
               </p>
-              <p className="mb-4">
+              <p className="mb-4 text -left">
                 <Link to='/about' className="text-neutral-600 dark:text-neutral-200">
                   About Us
                 </Link>
               </p>
-              <p className="mb-4">
+              <p className="mb-4 text -left">
                 <Link to='/termsandconditions' className="text-neutral-600 dark:text-neutral-200">
                   Terms & Condition
                 </Link>
               </p>
-              <p className="mb-4">
+              <p className="mb-4 text -left">
                 <Link to='/privacypolices' className="text-neutral-600 dark:text-neutral-200">
-                  Privacy Policys
+                  Privacy  Policy
                 </Link>
               </p>
-              <p className="mb-4">
+              <p className="mb-4 text -left">
                 <Link to='/shippingpolices' className="text-neutral-600 dark:text-neutral-200">
-                  Shipping Policys
+                  Shipping  Policy
                 </Link>
               </p>
-              <p className="mb-4">
+              <p className="mb-4 text -left">
                 <Link to='/refundpolices' className="text-neutral-600 dark:text-neutral-200">
-                  Refund & Cancellation Policys
+                Refund & Cancellation
                 </Link>
               </p>
             </div>
@@ -131,7 +129,7 @@ const Footer = () => {
                   <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                   <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                 </svg>
-                info@example.com
+                info@werev.co.in
               </p>
               <p className="mb-4 flex items-center justify-center md:justify-start">
                 <svg
@@ -146,7 +144,7 @@ const Footer = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                +91 23435-67388
+                +91 9896126184
               </p>
 
             </div>
