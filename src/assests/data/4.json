@@ -18,7 +18,7 @@
     "Horn": "Yes",
     "Keys": [
       { "Type": "Battery Lock" },
-      { "Type": "ON/OFF Key", "Details": "Heavy Duty Big Size" }
+      { "TypeDetails": "ON/OFF Key", "Details": "Heavy Duty Big Size" }
     ],
     "Carrier": "Yes",
     "Reflector": {

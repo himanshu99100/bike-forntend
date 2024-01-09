@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import './coustem.css';
 
 const ProductOverview = () => {
     const { id } = useParams();
@@ -41,28 +42,29 @@ const ProductOverview = () => {
     }
     useEffect(() => {
         fetchData();
+        window.scrollTo(0, 0);
+
     }, [id]);
     if (!productData || productImages.length === 0) {
         return <div>Loading...</div>;
     }
 
-    const { detial, Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, OperatingModes, Display, DeliveryOption, Service, ManualHandbook } = productData;
+    const {Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook } = productData;
 
     return (
-        <div className='lg:mx-5'>
+        <div className='lg:mx-10'>
             <div className='grid grid-cols-1 lg:grid-cols-5 gap-4'>
-
-                <div className='lg:col-span-4 lg:p-10'>
-                    <div className='w-fit mx-4 lg:w-3/5'>
+                <div className='lg:col-span-4 '>
+                    <div className='mx-auto' >
                         <img
                             src={mainImage}
-                            className='object-cover  rounded-t-lg'
                             alt='Main Product Image'
-                        />
+                            className='mx-auto sm:w-full heroimg lg:w-70'
+                            />
 
                     </div>
                 </div>
-                <div className='lg:col-span-1'>
+                <div className='lg:col-span-1 lg:my-auto'>
                     <div className='flex  flex-wrap justify-center lg:flex-col  '>
                         {productImages.map((image, index) => (
                             <img
@@ -75,12 +77,11 @@ const ProductOverview = () => {
                         ))}
                     </div>
                 </div>
-
             </div>
 
             <button className="bg-black text-white py-2 px-4 flex items-center rounded-2xl mx-auto mt-8">
                 <img src='https://icon-library.com/images/cart-icon-png-white/cart-icon-png-white-2.jpg' className='w-8 h-8'></img>
-                Add to Cart
+               Buy Now
             </button>
 
             <div >
@@ -193,7 +194,7 @@ const ProductOverview = () => {
                                         <td className="p-2 text-left border"><strong className="text-green-500">Horn:</strong>{Horn}</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-2 text-left border"><strong className="text-green-500">Operating Modes Of Bicyle: </strong> {OperatingModes}</td>
+                                        <td className="p-2 text-left border"><strong className="text-green-500">Operating Modes Of Bicyle: </strong> {Mode}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -239,7 +240,7 @@ const ProductOverview = () => {
                                         <td className="p-2 text-left border"><strong className="text-green-500">Key  :</strong> 2 Sets</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-2 text-left border"><strong className="text-green-500">Key Type Details:</strong> {Keys.Types}</td>
+                                        <td className="p-2 text-left border"><strong className="text-green-500">Key Type Details:</strong>Battery Lock </td>
                                     </tr>
                                     <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Carrier:</strong> {Carrier ? 'Yes' : 'No'}</td>

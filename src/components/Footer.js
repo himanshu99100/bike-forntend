@@ -71,32 +71,32 @@ const Footer = () => {
               </p>
             </div>
             <div className="m-0 lg:ml-12">
-              <p className="mb-4 text -left">
+              <p className="mb-4 text-left">
                 <Link to='/team' className="text-neutral-600 dark:text-neutral-200">
                   Our Team
                 </Link>
               </p>
-              <p className="mb-4 text -left">
+              <p className="mb-4 text-left">
                 <Link to='/about' className="text-neutral-600 dark:text-neutral-200">
                   About Us
                 </Link>
               </p>
-              <p className="mb-4 text -left">
+              <p className="mb-4 text-left">
                 <Link to='/termsandconditions' className="text-neutral-600 dark:text-neutral-200">
                   Terms & Condition
                 </Link>
               </p>
-              <p className="mb-4 text -left">
+              <p className="mb-4 text-left">
                 <Link to='/privacypolices' className="text-neutral-600 dark:text-neutral-200">
                   Privacy  Policy
                 </Link>
               </p>
-              <p className="mb-4 text -left">
+              <p className="mb-4 text-left">
                 <Link to='/shippingpolices' className="text-neutral-600 dark:text-neutral-200">
                   Shipping  Policy
                 </Link>
               </p>
-              <p className="mb-4 text -left">
+              <p className="mb-4 text-left">
                 <Link to='/refundpolices' className="text-neutral-600 dark:text-neutral-200">
                 Refund & Cancellation
                 </Link>
@@ -152,13 +152,8 @@ const Footer = () => {
         </div>
         {/*Copyright section*/}
         <div className="bg-black text-white text-center">
-          <span>© 2023 Copyright:</span>
-          <a
-            className="font-semibold text-neutral-600 dark:text-neutral-400"
-            href="https://tw-elements.com/"
-          >
-            TW elements
-          </a>
+          <span>© 2024 Copyright reserved</span>
+         
         </div>
       </footer>
     </div>

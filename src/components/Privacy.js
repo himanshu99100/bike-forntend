@@ -114,10 +114,7 @@ const Privacy = () => {
             </section>
             <div className='text-gray-700 font-bold text-md text-left mx-8 mt-5'>
                 WEREV Private Limited (CIN U29109HR2023PTC113632)
-                <br />
-                CO KAMLA W/O BHOLA RAM<br />
-                Balawas, Boria Kamalpur, Gokalgarh,
-                Rewari- 123401, Haryana, India.</div>
+                <br /></div>
         </div >
     )
 }

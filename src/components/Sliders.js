@@ -6,6 +6,7 @@ import img1 from '../assests/img1.jpeg';
 import img2 from '../assests/img2.jpeg';
 import img3 from '../assests/img3.jpeg';
 import img4 from '../assests/img4.jpeg';
+import img5 from '../assests/img5.jpg'
 const array = [
     {
         id: 1,
@@ -23,6 +24,10 @@ const array = [
         id: 4,
         imgsrc: img4,
     },
+    {
+      id: 5,
+      imgsrc: img5,
+  },
 ];
 const Sliders = () => {
     var settings = {

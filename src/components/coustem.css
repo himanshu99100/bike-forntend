@@ -1,0 +1,14 @@
+.heroimg{
+    width: 50rem;
+    aspect-ratio:3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+    margin-bottom: 20px;
+}
+@media (max-width:600px) {
+    .heroimg{
+    aspect-ratio:'2/3';
+    object-fit: contain;
+    width:full;
+    }
+}
