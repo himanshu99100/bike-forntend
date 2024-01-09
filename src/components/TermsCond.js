@@ -569,10 +569,7 @@ const TermsCond = () => {
       </section>
       <div className='text-gray-700 font-bold text-xl text-left mx-6'>
         WEREV Private Limited (CIN U29109HR2023PTC113632)
-        <br />
-        CO KAMLA W/O BHOLA RAM<br />
-        Balawas, Boria Kamalpur, Gokalgarh,
-        Rewari- 123401, Haryana, India.</div>
+        <br /></div>
     </div>
   )
 }

@@ -134,7 +134,7 @@ const Contact = () => {
                         <br></br>
                         <div className='text-left '>
                             <span className='text-md  font-bold text-gray-700'>
-                                Full-Address: </span>
+                                Address: </span>
                             <span className='text-md text-left text-gray-900'>Balawas,Boria Kamalpur, Gokalgarh, Rewari 123401, Haryana,India</span>
                             <br></br>
                             <br></br>

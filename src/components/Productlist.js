@@ -12,6 +12,9 @@ const count =
     { id: 4, name: 'Fire', img: img4 },
     { id: 5, name: 'AirOne', img: img5 }];
 
+
+   
+
 const Productlist = () => {
     return (
         <div>
@@ -29,11 +32,10 @@ const Productlist = () => {
                                     className="h-55 w-75 object-cover rounded-t-xl"
                                 />
                                 <div className="px-4 py-3 w-75">
-                                    <span className="text-gray-400 mr-3 uppercase text-xs">WeRav</span>
+                                    <span className="text-gray-400 mr-3 uppercase text-xs">WeRev</span>
                                     <p className="text-lg font-bold text-black truncate block capitalize">
                                         {product.name}
                                     </p>
-
                                 </div>
                             </Link>
                         </div>
