@@ -24,7 +24,7 @@ const News = () => {
     return (
         <div className='my-4 lg:my-12'>
             <h2 className='text-2xl text-center font-bold'>The Media is Talking About Us !</h2>
-            <div className='flex justify-center my-6 flex-wrap'>
+            <div className='flex justify-center my-6'>
                 {media.map((img) => (
                     <div  className='w-25 my-2 mx-4 lg:mx-10 overflow-hidden'>
                         <a href={img.href}>

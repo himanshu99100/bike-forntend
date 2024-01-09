@@ -6,8 +6,8 @@ import img3 from '../assests/Air/Air1.jpg'
 import img4 from '../assests/Fire/Fire1.jpg'
 import img5 from '../assests/AirOne/AirOne1.jpg'
 const count =
-    [{ id: 1, name: 'Earth', img: img1 },
-    { id: 2, name: 'Ether', img: img2 },
+    [{ id: 1, name: 'Ether', img: img1 },
+    { id: 2, name: 'Earth', img: img2 },
     { id: 3, name: 'Air', img: img3 },
     { id: 4, name: 'Fire', img: img4 },
     { id: 5, name: 'AirOne', img: img5 }];
