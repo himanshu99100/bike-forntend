@@ -6,7 +6,7 @@
     "Motor": {
       "Type": "Mid Drive",
       "Power": "250 watt",
-      "Torque": "80 ~ 90 Nm (*)",
+      "Torque": "40 ~ 50 Nm (*)",
       "Speed": "25kmph Maximum (*)",
       "Range": "50 ~ 60 kms with PAS (*)",
       "LoadCapacity": "120 kg. Maximum (*)"

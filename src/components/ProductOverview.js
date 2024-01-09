@@ -49,7 +49,7 @@ const ProductOverview = () => {
         return <div>Loading...</div>;
     }
 
-    const {Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook } = productData;
+    const {detial,Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook } = productData;
 
     return (
         <div className='lg:mx-10'>
@@ -61,8 +61,8 @@ const ProductOverview = () => {
                             alt='Main Product Image'
                             className='mx-auto sm:w-full heroimg lg:w-70'
                             />
-
                     </div>
+                    <h2 className='text-2xl text-gray-800 font-bold'>{detial.Name}</h2>
                 </div>
                 <div className='lg:col-span-1 lg:my-auto'>
                     <div className='flex  flex-wrap justify-center lg:flex-col  '>
