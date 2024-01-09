@@ -115,7 +115,7 @@ const Contact = () => {
                     </div>
                 </section>
 
-                <div className='lg:flex lg:justify-between'>
+                <div className=' mb-6 lg:flex lg:justify-between'>
                     <div className='lg:w-1/2 h-75 mx-4 lg:mx-10 '>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14062.078358116594!2d76.561096!3d28.221905!3m2!1i1024!2i768!4f13.
                             1!3m3!1m2!1s0x390d5b2ae77061f5%3A0xca4671fc29cd98db!2sWEREV%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1704381868878!5m2!1sen!2sin"
@@ -125,13 +125,6 @@ const Contact = () => {
                     <div className='mx-4'>
                         <h2 className='text-2xl text-center font-bold my-6 text-gray-700'>
                             WEREV PRIVATE LIMITED</h2>
-
-                        <div className='text-left'>
-                            <span className='text-md  font-bold text-gray-700'>
-                                Company Owner: </span>
-                            <span className='text-md text-left text-gray-900'>Kamla W/O Bhola Ram</span>
-                        </div>
-                        <br></br>
                         <div className='text-left '>
                             <span className='text-md  font-bold text-gray-700'>
                                 Address: </span>
@@ -146,7 +139,7 @@ const Contact = () => {
                             <br></br>
                         </div>
                         <br></br>
-                        <div >
+                        <div > 
                             <div className='lg:flex lg:justify-start' >
                                 <div >
                                     <a href="https://api.whatsapp.com/send?phone=919896126184" >
