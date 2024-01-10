@@ -24,6 +24,9 @@ const ProductOverview = () => {
     const [productData, setProductData] = useState(null);
     const [productImages, setProductImages] = useState([]);
     const [mainImage, setMainimage] = useState(null);
+    const [coursuelImage, setCourseuelimgae] = useState([]);
+    const [activeIndex, setActiveIndex] = useState(0);
+
     const fetchData = async () => {
         try {
             const module = await import(`../assests/data/${id}.json`);
@@ -35,6 +38,7 @@ const ProductOverview = () => {
                 images.push(imageModule.default);
             }
             setProductImages(images);
+            setCourseuelimgae(images)
             setMainimage(images[0]);
         } catch (error) {
             console.error('Error fetching product data:', error);
@@ -43,24 +47,36 @@ const ProductOverview = () => {
     useEffect(() => {
         fetchData();
         window.scrollTo(0, 0);
-
     }, [id]);
+
+    const gotoNext = () => {
+
+        setActiveIndex((prevIndex) => (prevIndex + 1) % coursuelImage.length);
+    }
+    const gotoPrev = () => {
+        setActiveIndex((prevIndex) => (prevIndex - 1 + coursuelImage.length) % coursuelImage.length);
+    }
     if (!productData || productImages.length === 0) {
         return <div>Loading...</div>;
     }
 
-    const {detial,Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook } = productData;
+    const { detial, Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook } = productData;
+
 
     return (
         <div className='lg:mx-10'>
             <div className='grid grid-cols-1 lg:grid-cols-5 gap-4'>
-                <div className='lg:col-span-4 '>
-                    <div className='mx-auto' >
-                        <img
-                            src={mainImage}
-                            alt='Main Product Image'
-                            className='mx-auto sm:w-full heroimg lg:w-70'
-                            />
+                <div className=' lg:col-span-4 '>
+                    <div className='mx-auto  hidden lg:block relative' >
+                        <button className='absolute top-1/2 left-2 transform-translate-y-1/2   text-yellow-700 text-3xl ' onClick={() => { gotoNext() }}> &lt;</button>
+                        <img src={coursuelImage[activeIndex]} className='courselimg object-contain' alt='Carousel Item'></img>
+                        <button className='absolute top-1/2 right-2 transform-translate-y-1/2  text-yellow-700  text-3xl ' onClick={() => { gotoPrev() }}>&gt;</button>
+
+                    </div>
+                    <div className='block lg:hidden relative'>
+                        <button className='absolute top-1/2 left-2 transform-translate-y-1/2   text-yellow-700 text-3xl ' onClick={() => { gotoNext() }}> &lt;</button>
+                        <img src={coursuelImage[activeIndex]} className=' border-gray-800 courselimg object-contain' alt='Carousel Item'></img>
+                        <button className='absolute top-1/2 right-2 transform-translate-y-1/2  text-yellow-700  text-3xl ' onClick={() => { gotoPrev() }}>&gt;</button>
                     </div>
                     <h2 className='text-2xl text-gray-800 font-bold'>{detial.Name}</h2>
                 </div>
@@ -71,17 +87,19 @@ const ProductOverview = () => {
                                 key={index}
                                 className='w-10 h-10 mx-4 lg:mx-auto border-2 my-2 border-blue-500'
                                 src={image}
-                                onClick={() => setMainimage(image)}
+                                onClick={() => {
+                                    setMainimage(image);
+                                    setActiveIndex(index);
+                                }}
                                 alt={`Thumbnail ${index}`}
                             />
                         ))}
                     </div>
                 </div>
             </div>
-
             <button className="bg-black text-white py-2 px-4 flex items-center rounded-2xl mx-auto mt-8">
                 <img src='https://icon-library.com/images/cart-icon-png-white/cart-icon-png-white-2.jpg' className='w-8 h-8'></img>
-               Buy Now
+                Buy Now
             </button>
 
             <div >
@@ -152,12 +170,12 @@ const ProductOverview = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
+                                    <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Power Voltage:</strong>{PowerSpecifications.Voltage}</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-2 text-left border"><strong className="text-green-500">Controller:</strong>{PowerSpecifications.Controller}</td>
-                                    </tr> 
+                                        <td className="p-2 text-left border"><strong className="text-green-500">Power :</strong>{PowerSpecifications.Controller}</td>
+                                    </tr>
                                     <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Charger-Type:</strong>{Charger.Type}</td>
                                     </tr>
@@ -167,7 +185,7 @@ const ProductOverview = () => {
                                     <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Display:</strong>{Display}</td>
                                     </tr>
-                                   
+
                                 </tbody>
                             </table>
                         </div>
@@ -254,7 +272,7 @@ const ProductOverview = () => {
             </div>
 
 
-       
+
         </div>
     )
 }
