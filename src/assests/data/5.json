@@ -4,8 +4,7 @@
         "id":5
     },
     "Motor": {
-      "Type": "Mid Drive",
-      "Power": "250 watt",
+      "Power": "250 watt Mid Drive",
       "Torque": "80 ~ 90 Nm (*)",
       "Speed": "25kmph Maximum (*)",
       "Range": "50 ~ 60 kms with PAS (*)",

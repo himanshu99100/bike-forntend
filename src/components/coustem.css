@@ -1,14 +1,34 @@
-.heroimg{
+.heroimg {
     width: 50rem;
-    aspect-ratio:3/2;
+    aspect-ratio: 3/2;
     object-fit: contain;
     mix-blend-mode: color-burn;
     margin-bottom: 20px;
 }
+.courselimg {
+    width: 70%;
+    aspect-ratio: 3/2;
+    margin: auto;
+
+}
+.videobox{
+    height: 38.125rem;
+    margin: auto;
+}
 @media (max-width:600px) {
-    .heroimg{
-    aspect-ratio:'2/3';
-    object-fit: contain;
-    width:full;
+    .heroimg {
+        aspect-ratio: '2/3';
+        object-fit: contain;
+        width: full;
     }
+    .courselimg {
+        width: 100%;
+        aspect-ratio: 3/2;
+    
+    }
+    .videobox{
+        width:100%;
+        height:15rem;
+    }
+    
 }

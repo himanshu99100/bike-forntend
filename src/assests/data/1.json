@@ -4,7 +4,7 @@
         "id":1
     },
     "Motor": {
-      "Power": "250 watt",
+      "Power": "250 watt Rear Drive",
       "Torque": "40 Nm ~ 50Nm (*)",
       "Speed": "25kmph Maximum (*)",
       "Range": "50 ~ 60 kms with PAS (*)",
