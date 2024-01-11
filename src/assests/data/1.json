@@ -12,12 +12,12 @@
     },
     "Lights": {
       "Front": "LED (White)",
-      "Rear": "Reflector (Red)"
+      "Rear": "LED (Red)"
     },
     "Horn": "Yes",
     "Keys": {
       "Sets": 2,
-      "Types": ["Battery Lock", "ON/OFF Key"],
+      "Types": "Battery Lock ON/OFF Key",
       "TypeDetails": "Heavy Duty Big Size"
     },
     "Carrier": {
@@ -25,6 +25,7 @@
       "Optional": true
     },
     "Reflector": {
+      "Available": true,
       "Colors": ["White", "Yellow", "Red"]
     },
     "Battery": {
@@ -42,9 +43,9 @@
     },
     "PowerSpecifications": {
       "Voltage": "36 VDC",
-      "Controller": "10A / 15A"
+      "Controller": "10A~15A"
     },
-    "Mode": ["Cruise", "PAS manual"],
+    "Mode":"5 modes PAS (Cruise Also)",
     "Display": "Analog (Battery Level + On/Off)",
     "DeliveryOption": "90% Assembled in a Corrugated Box (All over India)",
     "Service": "24/7 via Video Call and Tele Call",

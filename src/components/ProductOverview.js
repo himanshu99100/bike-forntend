@@ -200,10 +200,10 @@ const ProductOverview = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="p-2 text-left border"><strong className="text-green-500">Light Front:</strong> {Lights.Front}</td>
+                                        <td className="p-2 text-left border"><strong className="text-green-500">Front Light:</strong> {Lights.Front}</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-2 text-left border"><strong className="text-green-500">Light Rear:</strong> {Lights.Rear}</td>
+                                        <td className="p-2 text-left border"><strong className="text-green-500">Rear Light:</strong> {Lights.Rear}</td>
                                     </tr>
                                     <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Reflector:</strong> {Reflector.Available ? 'Yes (' + Reflector.Colors.join(' + ') + ')' : 'No'}</td>
@@ -212,7 +212,7 @@ const ProductOverview = () => {
                                         <td className="p-2 text-left border"><strong className="text-green-500">Horn:</strong>{Horn}</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-2 text-left border"><strong className="text-green-500">Operating Modes Of Bicyle: </strong> {Mode}</td>
+                                        <td className="p-2 text-left border"><strong className="text-green-500">Operating Modes: </strong>{Mode}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -255,10 +255,10 @@ const ProductOverview = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td className="p-2 text-left border"><strong className="text-green-500">Key  :</strong> 2 Sets</td>
+                                        <td className="p-2 text-left border"><strong className="text-green-500">Key  :</strong> {Keys.Sets} Sets</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-2 text-left border"><strong className="text-green-500">Key Type Details:</strong>Battery Lock </td>
+                                        <td className="p-2 text-left border"><strong className="text-green-500">Key Type Details:</strong>{Keys.Types}</td>
                                     </tr>
                                     <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Carrier:</strong> {Carrier ? 'Yes' : 'No'}</td>
