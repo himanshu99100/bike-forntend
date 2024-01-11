@@ -32,7 +32,7 @@
   "Battery": {
     "Type": "Lithium Ion (Cylindrical Cell) Panasonic",
     "Detachable": true,
-    "Capacity": "275 WHR",
+    "Capacity": "280 Whr",
     "Life": {
       "Warranty": "2 Years*",
       "Cycles": "~1500 discharge cycles"

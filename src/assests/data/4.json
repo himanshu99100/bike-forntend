@@ -17,7 +17,7 @@
     "Horn": "Yes",
     "Keys": {
       "Sets": 2,
-      "Types": "Battery Lock ON/OFF Key",
+      "Types": "Battery Lock , ON/OFF Key",
       "TypeDetails": "Heavy Duty Big Size"
     },
     "Carrier": "Yes",
@@ -28,7 +28,7 @@
     "Battery": {
       "Type": "Lithium Ion (Cylindrical Cell) Panasonic",
       "Detachable": true,
-      "Capacity": "275 WHR",
+      "Capacity": "280 Whr",
       "Life": {
         "Warranty": "2 Years*",
         "Cycles": "~1500 discharge cycles"
