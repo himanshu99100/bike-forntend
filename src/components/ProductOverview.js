@@ -60,7 +60,7 @@ const ProductOverview = () => {
         return <div>Loading...</div>;
     }
 
-    const { detial, Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook } = productData;
+    const { detial, Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook ,Design} = productData;
 
 
     return (
@@ -138,7 +138,7 @@ const ProductOverview = () => {
                             <table className="w-full border-collapse border border-gray-300">
                                 <thead>
                                     <tr>
-                                        <th colSpan='4' className="p-2 text-center bg-yellow-200 border">Bettery Details</th>
+                                        <th colSpan='4' className="p-2 text-center bg-yellow-200 border">Battery Details</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -260,8 +260,12 @@ const ProductOverview = () => {
                                     <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Key Type Details:</strong>{Keys.Types}</td>
                                     </tr>
+                                    
                                     <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Carrier:</strong> {Carrier ? 'Yes' : 'No'}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-2 text-left border"><strong className="text-green-500">Design:</strong> {Design}</td>
                                     </tr>
                                 </tbody>
                             </table>

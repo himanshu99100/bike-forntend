@@ -29,7 +29,7 @@ const About = () => {
             <div className='mx-4 lg:mx-12'>
                 <h1 className='text-3xl text-left font-bold text-gray-800  mb-6 lg:mb-12'>About Us</h1>
                 <p className='text-xl text-left mb-8'>
-                    <strong>WEREV PRIVATE LIMITED</strong> is a Haryana-based ebike startup company. We R ev is an electric vehicle company that provides ebikes at an affordable price for the future society and consumers.
+                    <strong>WEREV PRIVATE LIMITED</strong> is a Haryana-based first ebike startup company (26th July 2023). We R ev is an electric vehicle company that provides ebikes at an affordable price for the future society and consumers.
                 </p>
                 <hr/>
 

@@ -24,9 +24,9 @@ const News = () => {
             <h2 className='text-2xl text-center font-bold'>The Media is Talking About Us !</h2>
             <div className='flex justify-center my-6'>
                 {media.map((img) => (
-                    <div  className='w-full lg:w-1/6    h-50 my-2 mx-4 overflow-hidden'>
+                    <div key={img.id}  className='w-full lg:w-1/6    h-50 my-2 mx-4 overflow-hidden'>
                         <a href={img.href}>
-                            <img key={img.id}  src={img.imgsrc} className='w-full lg:w-2/3 object-contain' style={{aspectRatio:'3/2'}} alt='Circular Image' />
+                            <img  src={img.imgsrc} className='w-full lg:w-2/3 object-contain' style={{aspectRatio:'3/2'}} alt='Circular Image' />
                         </a>
                     </div>
                 ))}
