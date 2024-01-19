@@ -67,7 +67,10 @@ const Footer = () => {
                 WeRev PVT. LTD.
               </h6>
               <p>
-                A Welcome to <strong>WeRev</strong> where ev-cycling meets innovation and adventure! We take pride in introducing our exceptional line of bicycles, meticulously designed to elevate your riding experience. From cutting-edge technology to sleek aesthetics, our products are crafted for both performance and style.
+                A Welcome to <strong>WeRev</strong> where ebikes meets innovation and adventure! 
+                We take pride in introducing our
+                exceptional line of ebikes, meticulously designed to elevate your riding experience. 
+                From cutting-edge technology to sleek aesthetics, our products are crafted for both performance and style.
               </p>
             </div>
             <div className="m-0 lg:ml-12">

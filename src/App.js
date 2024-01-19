@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Homepage from './pages/Homepage';
 import Productdetial from './pages/productdetial';
@@ -16,21 +16,21 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
+      <Router>
+        <ScrollToTop/>
+        <Routes>  
         <Route path='/' element={<Homepage />}> </Route>
-          <Route path='accessories' element={<Accesspage />}> </Route>
-          <Route path='about' element={<Aboutpage/>}> </Route>
-          <Route path='contact' element={<Contactpage/>}> </Route>
-          <Route path='Product/:id' element={<Productdetial />}> </Route>
-          <Route path='Product' element={<Productpage />}> </Route>
-          <Route path='team' element={<Teampage />}> </Route>
-          <Route path='termsandconditions' element={<TCpage />}></Route>
-          <Route path='privacypolices' element={<Privacypage />}></Route>
-          <Route path='shippingpolices' element={<Shippingpage />}></Route>
-          <Route path='refundpolices' element={<Refundpage />}></Route>
-     </Routes> </BrowserRouter>
+          <Route path='/accessories' element={<Accesspage />}> </Route>
+          <Route path='/about' element={<Aboutpage/>}> </Route>
+          <Route path='/contact' element={<Contactpage/>}> </Route>
+          <Route path='/Product/:id' element={<Productdetial />}> </Route>
+          <Route path='/Product' element={<Productpage />}> </Route>
+          <Route path='/team' element={<Teampage />}> </Route>
+          <Route path='/termsandconditions' element={<TCpage />}></Route>
+          <Route path='/privacypolices' element={<Privacypage />}></Route>
+          <Route path='/shippingpolices' element={<Shippingpage />}></Route>
+          <Route path='/refundpolices' element={<Refundpage />}></Route>
+     </Routes> </Router>
     </div>
   );
 }
