@@ -3,51 +3,45 @@ import { useParams } from 'react-router-dom';
 import './coustem.css';
 
 const ProductOverview = () => {
-    const { id } = useParams();
-    const getProductName = (productId) => {
-        switch (productId) {
-            case '1':
-                return 'Earth';
-            case '2':
-                return 'Ether';
-            case '3':
-                return 'Air';
-            case '4':
-                return 'Fire';
-            case '5':
-                return 'AirOne';
-            default:
-                return '';
-        }
-    };
-    const name = getProductName(id);
+    const { name } = useParams();
     const [productData, setProductData] = useState(null);
-    const [productImages, setProductImages] = useState([]);
-    const [mainImage, setMainimage] = useState(null);
     const [coursuelImage, setCourseuelimgae] = useState([]);
     const [activeIndex, setActiveIndex] = useState(0);
 
     const fetchData = async () => {
         try {
-            const module = await import(`../assests/data/${id}.json`);
+            const images = [];
+            const module = await import(`../assests/data/${name}.json`);
             const productJson = module.default;
             setProductData(productJson);
-            const images = [];
-            for (let i = 1; i <= 10; i++) {
-                const imageModule = await import(`../assests/${name}/${name}${i}.jpg`);
-                images.push(imageModule.default);
-            }
-            setProductImages(images);
-            setCourseuelimgae(images)
-            setMainimage(images[0]);
+            const mainImageModule = await import(`../assests/${name}/${name}1.jpg`);
+            const mainImage = mainImageModule.default;
+            setCourseuelimgae([mainImage]);
         } catch (error) {
             console.error('Error fetching product data:', error);
         }
     }
+    const fetchAdditionalImages = async () => {
+        try {
+            const images = [];
+            for (let i = 2; i <= 10; i++) {
+                const imageModule = await import(`../assests/${name}/${name}${i}.jpg`);
+                images.push(imageModule.default);
+            }
+            setCourseuelimgae((prevImages) => [...prevImages, ...images]);
+        } catch (error) {
+            console.error('Error fetching additional images:', error);
+        }
+    };
     useEffect(() => {
         fetchData();
         window.scrollTo(0, 0);
-    }, [id]);
+    },[name]);
+    useEffect(() => {
+        if (productData) {
+            fetchAdditionalImages();
+        }
+    }, [productData]);
 
     const gotoNext = () => {
 
@@ -56,39 +50,33 @@ const ProductOverview = () => {
     const gotoPrev = () => {
         setActiveIndex((prevIndex) => (prevIndex - 1 + coursuelImage.length) % coursuelImage.length);
     }
-    if (!productData || productImages.length === 0) {
+    if (!productData || coursuelImage.length === 0) {
         return <div>Loading...</div>;
     }
 
-    const { detial, Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook ,Design} = productData;
+    const { detial, Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook, Design } = productData;
 
 
     return (
         <div className='lg:mx-10'>
             <div className='grid grid-cols-1 lg:grid-cols-5 gap-4'>
                 <div className=' lg:col-span-4 '>
-                    <div className='mx-auto  hidden lg:block relative' >
+                    <div className='mx-auto relative' >
                         <button className='absolute top-1/2 left-2 transform-translate-y-1/2   text-yellow-700 text-3xl ' onClick={() => { gotoNext() }}> &lt;</button>
-                        <img src={coursuelImage[activeIndex]} className='courselimg object-contain' alt='Carousel Item'></img>
+                        <img src={coursuelImage[activeIndex]} className='courselimg object-contain' alt='Carousel Item' loading='lazy'></img>
                         <button className='absolute top-1/2 right-2 transform-translate-y-1/2  text-yellow-700  text-3xl ' onClick={() => { gotoPrev() }}>&gt;</button>
 
-                    </div>
-                    <div className='block lg:hidden relative'>
-                        <button className='absolute top-1/2 left-2 transform-translate-y-1/2   text-yellow-700 text-3xl ' onClick={() => { gotoNext() }}> &lt;</button>
-                        <img src={coursuelImage[activeIndex]} className=' border-gray-800 courselimg object-contain' alt='Carousel Item'></img>
-                        <button className='absolute top-1/2 right-2 transform-translate-y-1/2  text-yellow-700  text-3xl ' onClick={() => { gotoPrev() }}>&gt;</button>
                     </div>
                     <h2 className='text-2xl text-gray-800 font-bold'>{detial.Name}</h2>
                 </div>
                 <div className='lg:col-span-1 lg:my-auto'>
                     <div className='flex  flex-wrap justify-center lg:flex-col  '>
-                        {productImages.map((image, index) => (
+                        {coursuelImage.map((image, index) => (
                             <img
                                 key={index}
                                 className='w-10 h-10 mx-4 lg:mx-auto border-2 my-2 border-blue-500'
                                 src={image}
                                 onClick={() => {
-                                    setMainimage(image);
                                     setActiveIndex(index);
                                 }}
                                 alt={`Thumbnail ${index}`}
@@ -260,7 +248,7 @@ const ProductOverview = () => {
                                     <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Key Type Details:</strong>{Keys.Types}</td>
                                     </tr>
-                                    
+
                                     <tr>
                                         <td className="p-2 text-left border"><strong className="text-green-500">Carrier:</strong> {Carrier ? 'Yes' : 'No'}</td>
                                     </tr>

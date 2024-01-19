@@ -26,7 +26,7 @@ const Productlist = () => {
                 <section className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
                     {count.map((product) => (
                         <div key={product.id} className="w-4/5 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-2xl ">
-                            <Link to={`/product/${product.id}`}>
+                            <Link to={`/product/${product.name}`}>
                                 <img
                                     src={product.img}
                                     alt="Product"
