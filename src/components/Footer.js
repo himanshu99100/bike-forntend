@@ -67,7 +67,7 @@ const Footer = () => {
                 WeRev PVT. LTD.
               </h6>
               <p>
-                A Welcome to <strong>WeRev</strong> where ebikes meets innovation and adventure! 
+                A Welcome to <strong>WeRev</strong> where ebike meets innovation and adventure! 
                 We take pride in introducing our
                 exceptional line of ebikes, meticulously designed to elevate your riding experience. 
                 From cutting-edge technology to sleek aesthetics, our products are crafted for both performance and style.
