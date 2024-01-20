@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import './coustem.css';
-
+import { RotatingLines } from 'react-loader-spinner'
+;
+  
 const ProductOverview = () => {
     const { name } = useParams();
     const [productData, setProductData] = useState(null);
     const [coursuelImage, setCourseuelimgae] = useState([]);
     const [activeIndex, setActiveIndex] = useState(0);
+    
 
     const fetchData = async () => {
         try {
@@ -51,7 +54,18 @@ const ProductOverview = () => {
         setActiveIndex((prevIndex) => (prevIndex - 1 + coursuelImage.length) % coursuelImage.length);
     }
     if (!productData || coursuelImage.length === 0) {
-        return <div>Loading...</div>;
+        return <div className='flex justify-center text-gray-900'>  
+        <RotatingLines
+        visible={true}
+        height="96"
+        width="96"
+        color="black"
+        strokeWidth="5"
+        animationDuration="0.75"
+        ariaLabel="rotating-lines-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        /></div>;
     }
 
     const { detial, Motor, Lights, Horn, Keys, Carrier, Reflector, Battery, Charger, PowerSpecifications, Mode, Display, DeliveryOption, Service, ManualHandbook, Design } = productData;
